@@ -217,7 +217,7 @@ TIMEZONE = "America/New_York"
 # 2 = using a string like “2 days ago”
 #
 # Your theme must support it, bootstrap and bootstrap3 already do.
-# DATE_FANCINESS = 0
+DATE_FANCINESS = 1
 
 # While Nikola can select a sensible locale for each language,
 # sometimes explicit control can come handy.
@@ -550,20 +550,20 @@ REDIRECTIONS = []
 # named `default` will be executed.  You can use as many presets
 # in a `nikola deploy` command as you like.
 DEPLOY_COMMANDS = [
-    "git checkout gh-pages",
-    "rsync -rPv --delete-after --exclude old_blog --exclude .git --exclude .gitignore --exclude cache/ --exclude .doit.db.db output/ .",
-    "git add -A",
-    "git commit -a -m 'Updating blog content'",
-    "git push",
-    "git checkout master",
+    # "git checkout gh-pages",
+    # "rsync -rPv --delete-after --exclude old_blog --exclude .git --exclude .gitignore --exclude cache/ --exclude .doit.db.db output/ .",
+    # "git add -A",
+    # "git commit -a -m 'Updating blog content'",
+    # "git push",
+    # "git checkout master",
 ]
 
 # github_deploy configuration
 # For more details, read the manual:
 # https://getnikola.com/handbook.html#deploying-to-github
 # You will need to configure the deployment branch on GitHub.
-GITHUB_SOURCE_BRANCH = 'src'
-GITHUB_DEPLOY_BRANCH = 'master'
+GITHUB_SOURCE_BRANCH = 'master'
+GITHUB_DEPLOY_BRANCH = 'gh-pages'
 
 # The name of the remote where you wish to push to, using github_deploy.
 GITHUB_REMOTE_NAME = 'origin'
